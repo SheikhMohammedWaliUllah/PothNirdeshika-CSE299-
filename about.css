@@ -1,0 +1,155 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Times New Roman', Times, serif;
+  }
+  body {
+	font-family: Arial, sans-serif;
+	background-image: url('path.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+  .navbar {
+	width: 90%;
+	padding: 15px;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+  }
+  
+  .logo {
+	width: 70px;
+	margin-top: -10px;
+	cursor: pointer;
+  }
+  
+  .navbar ul {
+	list-style: none;
+	display: flex;
+  }
+  
+  .navbar ul li {
+	list-style: none;
+    display: inline-block;
+    margin: 20px;
+  }
+  
+  .navbar ul li a {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: rgb(179, 182, 0);
+	font-weight: 600;
+	padding: 15px;
+  }
+  
+  li a:hover {
+	background: white;
+	transition: 0.5s;
+}
+
+.navbar a:hover {
+	color: black;
+}
+
+  .about {
+	width: 100%;
+	min-height: 100vh;
+	background: url('path.jpg') no-repeat center center fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .about .content img {
+	height: auto;
+	width: 100%;
+	max-width: 500px;
+	margin-bottom: 200px;
+  }
+  
+  .text {
+	width: 100%;
+	max-width: 550px;
+	padding: 0 10px;
+	padding-top: 2px;
+  }
+  
+  .content {
+	width: 95%;
+	max-width: 1280px;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
+  }
+  
+  .text h1 {
+	color: rgb(152, 132, 16);
+	font-size: 5vw;
+	margin-bottom: 20px;
+	text-transform: capitalize;
+  }
+  
+  .text h5 {
+	color: rgb(225, 94, 237);
+	font-size: 3vw;
+	margin-bottom: 25px;
+	text-transform: capitalize;
+	letter-spacing: 2px;
+  }
+  
+  .text p {
+	color: aquamarine;
+	font-size: 2vw;
+	line-height: 1.4;
+	letter-spacing: 2px;
+	margin-bottom: 45px;
+  }
+  
+  button {
+	background-color: rgb(113, 228, 232);
+	color: rgb(1, 1, 1);
+	border: 2px solid transparent;
+	text-decoration: none;
+	padding: 10px 30px;
+	border-radius: 30px;
+	font-size: 1.5vw;
+	font-weight: bold;
+	margin-bottom: 150px;
+  }
+  
+  button:hover {
+	transform: scale(1.2);
+	background-color: transparent;
+	border: 2px solid rgb(27, 49, 148);
+	color: rgb(49, 235, 241);
+	transition: .4s;
+	cursor: pointer;
+  }
+  
+  @media screen and (max-width: 1180px) {
+	.about {
+	  padding: 70px 0;
+	}
+  }
+  
+  @media screen and (max-width: 650px) {
+	.about .content img {
+	  margin-bottom: 35px;
+	}
+  
+	.text h1 {
+	  font-size: 8vw;
+	  margin-bottom: 25px;
+	}
+  
+	.text h5 {
+	  font-size: 5vw;
+	}
+  }
+  
+

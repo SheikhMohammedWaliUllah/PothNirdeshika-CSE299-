@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background-image: url('path\ 2.jpg');
+}
+
+.container {
+  background-color: #3a36364c;
+  width: 400px;
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(236, 236, 0, 0.989);
+}
+
+.container h2 {
+  text-align: center;
+  color: #b1a51f;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.form-group input {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-bottom: 1px solid #554848;
+  font-size: 16px;
+  padding: 5px 0;
+  transition: border-bottom-color 0.3s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-bottom-color: #c1d320;
+}
+
+.form-group label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #000000;
+  font-size: 16px;
+  padding: 5px 0;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+.form-group input:focus ~ label,
+.form-group input:valid ~ label {
+  top: -20px;
+  left: 0;
+  font-size: 14px;
+  color: #9ced21;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  height: 40px;
+  border: none;
+  background-color: #80df44;
+  color: #060606b6;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 10px;
+}
+
+.or {
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.google-btn {
+  background-color: #55f6ee;
+  color: #000000;
+}
+
+.google-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
