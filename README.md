@@ -20,6 +20,8 @@ Web Interfaces are given below:
 
 ![Screenshot (684)](https://github.com/SheikhMohammedWaliUllah/PothNirdeshika-CSE299-/assets/64364859/a8b4c8c6-df22-488a-a4b1-4275b204a914)
 
+![Screenshot (462)](https://github.com/SheikhMohammedWaliUllah/PothNirdeshika-CSE299-/assets/64364859/a3b74258-200c-4824-8c17-032bed6f6d28)
+
 ![Screenshot (685)](https://github.com/SheikhMohammedWaliUllah/PothNirdeshika-CSE299-/assets/64364859/ec0359a6-0845-4985-be29-38975ca3f2f3)
 
 ![Screenshot (686)](https://github.com/SheikhMohammedWaliUllah/PothNirdeshika-CSE299-/assets/64364859/8449097c-c1f0-4cce-9bb9-808d9eeb7d83)
