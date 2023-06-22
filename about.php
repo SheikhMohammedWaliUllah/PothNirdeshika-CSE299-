@@ -24,7 +24,7 @@
                 <h1>About</h1>
                 <h5>Path Destination</h5>
                 <p class="par">This website will help users search for a path to a place and provide suggestions to follow along the path. Users can also contact experts for help.</p>
-                <button type="button">Suggestions</button>
+                <a href="form.php"><button type="button">Suggestions</button></a>
             </div>
         </div>
     </section>

@@ -43,22 +43,6 @@
         .button:hover {
             background-color: #45a049;
         }
-
-        /* Logout button */
-        .logout-button {
-            padding: 10px 20px;
-            font-size: 25px;
-            background-color: #9EB644;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            margin: 0 10px;
-        }
-
-        .logout-button:hover {
-            background-color: #45a049;
-        }
         
         /* Embedded navbar styles */
         .navbar {
@@ -139,7 +123,7 @@
         <ul>
             <li><a id="homeButton" href="homepage.php">HOME</a></li>
             <li><a id="aboutButton" href="about.php">ABOUT</a></li>
-            <li><a id="adminButton" href="user.php">ADMIN</a></li>
+            <li><a id="adminButton" href="adminlogin.php ">ADMIN</a></li>
             <li><a id="userButton" href="sns/index.php">USER</a></li>
         </ul>
     </div>
@@ -150,9 +134,9 @@
         <div class="button-container">
             <button class="button" onclick="location.href='Marker test/map.php'">Expert Location</button>
             <button class="button" onclick="location.href='Direction/index.php'">Route</button>
-            <button class="button" onclick="location.href='Call Feature/index.php'">Call and Chat</button>
-            <button class="logout-button" onclick="location.href='sns/index.php'">Logout</button>
+            <button class="button" onclick="location.href='Call Feature/index.php'">Call Expert</button>
         </div>
     </div>
 </body>
 </html>
+

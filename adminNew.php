@@ -1,21 +1,19 @@
-
 <?php
-$conn = new mysqli('localhost','root','','education');
+$conn = new mysqli('localhost','root','','expertlocation');
 	if($conn->connect_error){
 		die('Connection	: Failed'.$conn->connect_error);
 	}else{  
     if(isset($_POST['Insert'])){
     $id= $_POST['id'];
     $name = $_POST['name'];
-    $address = $_POST['address'];
     $lat = $_POST['lat'];
     $lng = $_POST['lng'];
     $phone = $_POST['phone'];
     //checking if the data is already available
-    $query1 = "SELECT * FROM colleges WHERE name='$name' AND type='$phone'";
+    $query1 = "SELECT * FROM markers WHERE name='$name' AND phone='$phone'";
     $result1 = mysqli_query($conn,$query1);
     if(mysqli_num_rows($result1) == 0){
-    $query = "INSERT INTO colleges (id, name, address, type, lat, lng) VALUE ('$id','$name','$address','$phone','$lat','$lng')"; 
+    $query = "INSERT INTO markers (id, name, phone, lat, lng , type) VALUE ('$id','$name','$phone','$lat','$lng', 'expert')"; 
     $result = mysqli_query($conn,$query);
     if($result === false){
       echo "<script> alert('Error in insertion'); </script>";
@@ -31,15 +29,14 @@ $conn = new mysqli('localhost','root','','education');
     if(isset($_POST['Delete'])){
       $id= $_POST['id'];
       $name = $_POST['name'];
-      $address = $_POST['address'];
+      $phone = $_POST['phone'];
       $lat = $_POST['lat'];
       $lng = $_POST['lng'];
-      $phone = $_POST['phone'];
       //checking if the data is already available
-      $query1 = "SELECT * FROM colleges WHERE name='$name' AND type='$phone'";
+      $query1 = "SELECT * FROM markers WHERE name='$name' AND phone='$phone'";
       $result1 = mysqli_query($conn,$query1);
       if(mysqli_num_rows($result1) > 0){
-      $query = "DELETE FROM colleges WHERE name='$name' AND type='$phone'"; 
+      $query = "DELETE FROM markers WHERE name='$name' AND phone='$phone'"; 
       $result = mysqli_query($conn,$query);
       if($result === false){
         echo "<script> alert('Error in deletion'); </script>";
@@ -54,14 +51,12 @@ $conn = new mysqli('localhost','root','','education');
   }
 ?>
 
-
 <!DOCTYPE html>
 <html>
 <head>
   <title>Insert Form</title>
   <style>
-    body 
-    {
+    body {
       font-family: Arial, sans-serif;
       background-color: #f2f2f2;
       margin: 0;
@@ -72,8 +67,7 @@ $conn = new mysqli('localhost','root','','education');
       min-height: 100vh;
     }
 
-    form 
-    {
+    form {
       background-color: #fff;
       padding: 20px;
       border-radius: 5px;
@@ -84,22 +78,19 @@ $conn = new mysqli('localhost','root','','education');
       flex-direction: column;
     }
 
-    .form-row 
-    {
+    .form-row {
       display: flex;
       align-items: center;
       margin-bottom: 10px;
     }
 
-    .form-row label 
-    {
+    .form-row label {
       width: 100px;
       margin-right: 10px;
       text-align: right;
     }
 
-    input[type="text"] 
-    {
+    input[type="text"] {
       flex: 1;
       padding: 8px;
       border-radius: 4px;
@@ -107,25 +98,41 @@ $conn = new mysqli('localhost','root','','education');
       box-sizing: border-box;
     }
 
-    .submit-container 
-    {
+    .submit-container {
       display: flex;
-      justify-content: center;
+      justify-content: center; /* Center the buttons horizontally */
+      align-items: center; /* Center the buttons vertically */
+      margin-top: 10px;
     }
 
-    input[type="submit"] 
-    {
+    .submit-container input[type="submit"],
+    .submit-container a,
+    .submit-container button {
       background-color: #4CAF50;
       color: #fff;
       padding: 10px 20px;
       border: none;
       border-radius: 4px;
       cursor: pointer;
+      margin-right: 10px; /* Added margin to create space between buttons */
+      text-decoration: none; /* Added to remove underline from "Go back to login" button */
     }
 
-    input[type="submit"]:hover 
-    {
+    .submit-container input[type="submit"]:hover,
+    .submit-container a:hover,
+    .submit-container button:hover {
       background-color: #45a049;
+    }
+
+    .top-right-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+    .top-left-button {
+      position: absolute;
+      top: 10px;
+      left: 10px;
     }
   </style>
 </head>
@@ -163,11 +170,10 @@ $conn = new mysqli('localhost','root','','education');
 
     <div class="submit-container">
       <input type="submit" value="Insert" name="Insert">
-    </div>
-    <div class="submit-container">
       <input type="submit" value="Delete" name="Delete">
+      <a href="adminNew1.php" class="top-left-button">Go back</a>
+      <button onclick="location.href='adminNew1.php'" class="top-right-button">Expert Info</button>
     </div>
   </form>
 </body>
 </html>
-

@@ -10,7 +10,7 @@ if(!empty($_POST['submit']))
     $flag = mysqli_num_rows($result);
     if($flag > 0){
         echo "DONE";
-        header('location: adminNew.php');
+        header('location: adminNew1.php');
     }else{
       $message = 'user/pass incorrect'; 
       // echo '<span style="color:#AFA;text-align:left;"> NOT DONE </span>';

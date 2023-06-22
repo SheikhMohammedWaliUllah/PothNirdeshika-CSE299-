@@ -3,9 +3,29 @@
 <head>
   <title>Calling</title>
   <link rel="stylesheet" href="site.css">
+  <style>
+    #button-go-back {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #444241;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    #button-go-back:hover {
+      background-color: #070707;
+    }
+  </style>
 </head>
 
 <body>
+  <button id="button-go-back" onclick="goBack()">Go Back</button>
+
   <div id="controls">
     <div id="info">
       <p class="instructions">Twilio Client</p>
@@ -49,5 +69,14 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 <!--End of Tawk.to Script-->
+
+  <script type="text/javascript" src="twilio.min.js"></script>  
+  <script src="jquery.min.js"></script>
+  <script src="quickstart.js"></script>
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
 </body>
 </html>

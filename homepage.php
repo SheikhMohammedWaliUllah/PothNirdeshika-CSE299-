@@ -22,15 +22,15 @@
         <div class="content">
             <h1>Welcome to Poth Nirdeshika</h1>
             <div>
-                <button id="suggestionsButton" type="button">SUGGESTIONS</button>
+                <button id="suggestionsButton" type="button" onclick="goToFormPage()">SUGGESTIONS</button>
             </div>
         </div>
     </div>
 
     <script>
-        document.getElementById("suggestionsButton").addEventListener("click", function() {
-            window.location.href = "suggestions.php";
-        });
+        function goToFormPage() {
+            window.location.href = "form.php";
+        }
     </script>
 </body>
 </html>
