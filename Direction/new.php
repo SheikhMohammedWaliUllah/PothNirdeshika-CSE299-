@@ -69,7 +69,7 @@
 			}
 		}
 	</script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYaX_t1lKNDDhLmb-PezLwlDhfOQy9ZiE&libraries=places&callback=initMap"
+	<script src="https://maps.googleapis.com/maps/api/js?key=API_KEY&libraries=places&callback=initMap"
     async defer></script>
     <div>
         <label>From:</label>
