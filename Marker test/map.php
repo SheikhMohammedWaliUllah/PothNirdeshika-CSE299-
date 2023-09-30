@@ -107,6 +107,6 @@
 
     function doNothing() {}
   </script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAt2aJu3kpsOdbFIJJV-Nimi2qpDEButpg&callback=initMap" defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMap" defer></script>
 </body>
 </html>
